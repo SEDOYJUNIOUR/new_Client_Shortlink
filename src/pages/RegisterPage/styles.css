@@ -1,4 +1,4 @@
-.PegisterWindow {
+.RegisterWindow {
   background-color: lightblue;
   border: 3px solid black;
   border-radius: 15%;
@@ -21,10 +21,10 @@
 }
 
 * {
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
 }
 
-.RegisterButtom {
+.RegisterButton {
   color: black;
   text-decoration: none;
   position: relative;

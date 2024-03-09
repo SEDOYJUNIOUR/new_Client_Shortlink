@@ -5,11 +5,10 @@ import '../pages/ShortLinkPage/styles.css'
 
 class CopyLinkToClipboardButton extends React.Component {
 	componentDidMount() {
-		// Получаем текст из тега <a> с помощью querySelector
 		const linkElement = document.getElementById('copy');
 		if (linkElement) {
 			new ClipboardJS(this.button, {
-				text: () => linkElement.innerText, // Копируем текст из <a> в буфер обмена
+				text: () => linkElement.innerText,
 			});
 		}
 	}

@@ -11,7 +11,7 @@ const Home = () => {
 					<p className={'logo'}/>
 					{"accessToken" in window.localStorage ? (
 						<>
-							<br/><Link to={'/shortLink'} className={'HomeButtom'}>
+							<br/><Link to={'/shortLink'} className={'HomeButton'}>
 							<Button>
 								Вернуться к кликеру
 							</Button>
@@ -19,12 +19,12 @@ const Home = () => {
 						</>
 					) : (
 						<>
-							<Link to={'/signin'} className={'HomeButtom'}>
+							<Link to={'/sign-in'} className={'HomeButton'}>
 								<Button>
 									Войти
 								</Button>
 							</Link><br></br><br></br>
-							<Link to={'/register'} className={'HomeButtom'}>
+							<Link to={'/register'} className={'HomeButton'}>
 								<Button>
 									Зарегистрироваться
 								</Button>

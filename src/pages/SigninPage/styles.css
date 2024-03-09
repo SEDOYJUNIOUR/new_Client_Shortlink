@@ -1,10 +1,10 @@
 
-.SigninWindow {
+.SignInWindow {
   background-color: lightblue;
   border: 3px solid black;
   border-radius: 15%;
   width: 400px;
-  height: 380px;
+  height: 360px;
   position: absolute;
   top: 0;
   right: 0;
@@ -13,7 +13,7 @@
   margin: auto;
 }
 
-.SigninInput {
+.SignInInput {
   width: 300px;
   font-size: 16px;
   padding: 6px 0 4px 10px;
@@ -22,15 +22,15 @@
 }
 
 * {
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
 }
 
-.SigninButtom {
+.SignInButton {
   color: black;
   text-decoration: none;
   position: relative;
 }
 
-.SigninTitle {
+.SignInTitle {
   font-size: 40px;
 }

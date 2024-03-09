@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/client.iml" filepath="$PROJECT_DIR$/.idea/client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../server/.idea/server.iml" filepath="$PROJECT_DIR$/../server/.idea/server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../rect_is_life/short-links/.idea/short-links.iml" filepath="$PROJECT_DIR$/../../../../rect_is_life/short-links/.idea/short-links.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../short-links-fullstack-new-server/server/.idea/short-links-new-version.iml" filepath="$PROJECT_DIR$/../../short-links-fullstack-new-server/server/.idea/short-links-new-version.iml" />
+    </modules>
+  </component>
+</project>

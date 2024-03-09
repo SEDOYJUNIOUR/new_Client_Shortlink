@@ -4,7 +4,7 @@ import React, {useState} from "react";
 import {Avatar, Button, Input, TextField} from "@mui/material";
 import {Created_ShortLinks} from "../../components/Created_ShortLinks/Created_ShortLinks";
 import {Scrollbars} from 'react-custom-scrollbars-2';
-import {Link} from "react-router-dom";
+import { Link, Navigate } from 'react-router-dom';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import {useForm} from "react-hook-form";
 import { useMutation, useQuery } from '@apollo/client';
@@ -77,6 +77,9 @@ const Profile = () => {
 		}
 	}
 	};
+	if (!("accessToken" in window.localStorage)) {
+		return <Navigate to="/"/>;
+	}
 	return (
 		<div>
 			<center><Collapse in={openMessage} sx={{width: 420}}>
@@ -157,7 +160,7 @@ const Profile = () => {
 							)
 						)}
 					</Scrollbars>
-					<div className={'ConteinerBtnProfile'}>
+					<div className={'ContainerBtnProfile'}>
 						{save ? (
 							<>
 								<Link to="/shortLink">

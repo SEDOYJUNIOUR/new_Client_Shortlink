@@ -47,7 +47,7 @@
   border-radius: 8px;
 }
 
-.ShortLinkButtom {
+.ShortLinkButton {
   color: white;
   top: -50px;
   left: 30px;
@@ -80,7 +80,7 @@
   left: 20px;
 }
 
-.ConteinerBtn {
+.ContainerBtn {
   display: flex;
   width: 220px;
   justify-content: space-between;
