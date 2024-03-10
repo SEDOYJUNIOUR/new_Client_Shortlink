@@ -2,7 +2,7 @@ import React from "react";
 import {BrowserRouter} from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink, ApolloLink } from '@apollo/client';
+import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
 

@@ -38,27 +38,9 @@ export const Created_ShortLinks = ({
 				<LinkIcon/>
 				{link}
 			</a><br></br><br/>
-			<div className={'ConteinerBtn'}>
+			<div className={'ContainerBtn'}>
 				<CopyLinkToClipboardButton>
 				</CopyLinkToClipboardButton>
-				<PopupState variant="popover" popupId="demo-popup-menu">
-					{(popupState) => (
-						<>
-							<Button variant="contained" className={'BtnRes'} {...bindTrigger(popupState)}>
-								<ShareIcon/>
-							</Button>
-							<Menu {...bindMenu(popupState)}>
-								<MenuItem onClick={popupState.close}><a
-									href='https://web.telegram.org/k/' className='Icon'><TelegramIcon/> Телеграм</a></MenuItem>
-								<MenuItem onClick={popupState.close}><a href='https://www.reddit.com/?rdt=58403'
-								                                        className='Icon'><RedditIcon/> Редит</a></MenuItem>
-								<MenuItem onClick={popupState.close}><a href='https://github.com'
-								                                        className='Icon'><GitHubIcon/> Гитхаб</a></MenuItem>
-							</Menu>
-						</>
-					)}
-				</PopupState>
-			
 			</div>
 			<p>{redirectCount}</p>
 			{/*<img src={qrcode} className={'QRCode'}></img>*/}

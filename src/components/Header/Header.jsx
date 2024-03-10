@@ -30,11 +30,11 @@ export const Header = () => {
 						onClick={onClickLogout}
 						variant="contained"
 						color="error"
-						className={'HeaderButtom'}
+						className={'HeaderButton'}
 					>
 						Выйти
 					</Button>
-					<Link className={'HeaderButtom'} to="/profile">
+					<Link className={'HeaderButton'} to="/profile">
 						<Button variant="contained">Профиль</Button>
 					</Link>
 				</div>
