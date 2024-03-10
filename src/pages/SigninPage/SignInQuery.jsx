@@ -1,10 +1,11 @@
-export const SignInQuery = (username,password,SignInMutation) => {
+export const SignInQuery = async (username,password,SignInMutation) => {
+
 	if (!username.length){
 			return "Введите логин"
 		} else if (!password.length) {
 			return "Введите пароль"
 		}
-   return SignInMutation({
+   return  SignInMutation({
 			variables: {
 				body: {
 					username: username,

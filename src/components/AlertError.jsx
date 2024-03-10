@@ -8,7 +8,7 @@ export const AlertError = ({errorMassage, errorMessageChange}) =>{
   const [open, setOpen] = useState(true)
   return (
     <>
-      <center><Collapse in={open} sx={{ width: 420 }}>
+      <center><Collapse in={open} sx={{ width: 420 , mt: 9}}>
         <Alert
           severity="warning"
           action={

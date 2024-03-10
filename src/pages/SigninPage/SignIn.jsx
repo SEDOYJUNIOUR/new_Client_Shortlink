@@ -25,6 +25,7 @@ const SignIn = () => {
 	
 	const errorMessageChange = (value) => {
 		setErrorMessage(value)
+		console.log(value);
 	}
 	
 	if ("accessToken" in window.localStorage) {
@@ -48,12 +49,10 @@ const SignIn = () => {
 						</Button>
 					</Link>
 					<Button
-						onClick={() =>
-							SignInQuery(username, password, SignInMutation)
-								.then((value) =>
-									setErrorMessage(value)
+						onClick={() => SignInQuery(username, password, SignInMutation).then((value) =>
+								setErrorMessage(value)
 								)
-					}
+						}
 						className={'SignIButton'}
 						size="large">
 						Войти

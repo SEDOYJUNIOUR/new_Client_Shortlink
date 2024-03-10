@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import './styles.css';
+
+import React from 'react';
 import LinkIcon from '@mui/icons-material/Link';
 import CopyLinkToClipboardButton from '../../components/button';
-import QRCode from 'qrcode';
 
-const ShortLinkPopWindow = ({ shortLink}) => {
-  const [qrcode, setQrcode] = useState('');
-  QRCode.toDataURL(shortLink, (url) => {
-			setQrcode(url)
-		})
+export const ShortLinkPopWindow = ({ shortLink, qrcode}) => {
   return (
     <>
     <div className={'ShortLinkWindowRes'}><br />
@@ -18,7 +15,7 @@ const ShortLinkPopWindow = ({ shortLink}) => {
       <div className={'ContainerBtn'}>
         <CopyLinkToClipboardButton />
       </div>
-      <img src={qrcode} className={'QRCode'} />
+      <img src={qrcode} alt={''} className={'QRCode'} />
     </div>
       </>
   );

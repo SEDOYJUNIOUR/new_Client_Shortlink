@@ -1,5 +1,12 @@
-export const ShortLinkQuery = async (link, userLink, ShortLinkMutation) => {
-  return await ShortLinkMutation({
+import QRCode from 'qrcode';
+
+
+export const ShortLinkQuery = async (link, userLink, ShortLinkMutation, qrcodeChange) => {
+	if (!link.length) {
+		return ['error', 'Введите ссылку']
+	}
+	
+	return await ShortLinkMutation({
 			variables: {
 				body: {
 					link: link,
@@ -7,11 +14,13 @@ export const ShortLinkQuery = async (link, userLink, ShortLinkMutation) => {
 				}
 			}
 		}).then(({data}) => {
-			console.log(data.getShortLink.shortLink);
-			return data.getShortLink.shortLink
+			QRCode.toDataURL(data.getShortLink.shortLink).then( value  => {qrcodeChange(value)})
+			return ['data',data.getShortLink.shortLink]
 		}).catch((errors) => {
-			return errors.message
-			// return alert("Введённый текст не является ссылкой");
+			if (errors.message === 'Bad Request Exception') {
+				return ['error', "Введённый текст не является ссылкой"]
+			}
+			return ['error', errors.message]
 		})
 };
 
